@@ -48,7 +48,20 @@ def home():
 
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    nombre = None
+    apellido = None
+
+    # Verificar si la sesión está iniciada y obtener el nombre y apellido del usuario
+    if 'logueado' in session:
+        # Obtener el usuario actual de la base de datos
+        id_usuario = session.get('id_usuario')
+        usuario_actual = Usuario.query.filter_by(id_usuario=id_usuario).first()
+
+        if usuario_actual:
+            nombre = usuario_actual.nombre
+            apellido = usuario_actual.apellido
+
+    return render_template('index.html', nombre=nombre, apellido=apellido)
 
 
 @app.route('/admin')
@@ -68,7 +81,7 @@ def login():
         if account:
             session['logueado'] = True
             session['id_usuario'] = account.id_usuario
-            return render_template("index.html")
+            return redirect(url_for("index"))
         else:
             return render_template('login.html', mensaje="Usuario o Contraseña Incorrectas")
     else:

@@ -11,6 +11,13 @@
         <div class="sidebar">
             <div class="logo-container">
                 <img src="logo.png" alt="Logo de la aplicación">
+                <div class="user-info">
+                    {% if nombre and apellido %}
+                        <p>{{ nombre }} {{ apellido }}</p>
+                    {% else %}
+                        <p>Sesión no iniciada</p>
+                    {% endif %}
+                </div>
             </div>
             <h2>BRAIN</h2>
             <ul>
