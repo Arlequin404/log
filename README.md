@@ -1,3 +1,6 @@
+### INDICACIONES PARA EJECUTAR PROYECTO
+
+```bash
 ### Instalación de virtualenv
 
 Para crear un entorno virtual para tu proyecto, primero necesitas instalar `virtualenv`. 
