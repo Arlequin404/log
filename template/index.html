@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo de la aplicación">
+            </div>
+            <h2>BRAIN</h2>
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="{{ url_for('listar_aulas') }}">Aulas</a></li>
+                <li><a href="{{ url_for('calificaciones') }}">Notas</a></li> <!-- Cambio aquí -->
+                <li><a href="recomendaciones.html">Recomendaciones</a></li>
+                <li><a href="material_educativo.html">Material Educativo</a></li>
+                <li><a href="notificaciones.html">Notificaciones</a></li>
+                <li><a href="chat_ia.html">Chat IA</a></li>
+            </ul>
+            <form action="{{ url_for('cerrar_sesion') }}" method="POST">
+                <button type="submit" class="logout-button">Cerrar sesión</button>
+            </form>
+        </div>
+        <div class="content">
+            <h2>Inicio</h2>
+            <div class="aula-container">
+                {% for aula in aulas %}
+                <div class="aula-card">
+                    <strong>{{ aula.nombre_materia }}</strong>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

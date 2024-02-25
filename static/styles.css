@@ -1,0 +1,314 @@
+/*LOGIN*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*REGIDTRO*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.registro-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/*AULAS*/
+
+/* Estilos para la página de listado de aulas */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilos para el contenedor de aulas */
+.aula-container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+/* Estilos para cada tarjeta de aula */
+.aula-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.aula-card strong {
+    font-size: 18px;
+}
+
+/* Estilos para los botones de acciones en las aulas */
+.aula-actions {
+    display: flex;
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+    margin-top: 10px;
+}
+
+.action-form {
+    margin-left: 10px; /* Espacio entre los formularios */
+}
+
+.action-button {
+    padding: 10px 80px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+.crear-aula-button {
+    display: block;
+    margin: 0 auto; /* Centrar el botón */
+}
+
+
+/*BOTON ATRAS*/
+
+ .back-button-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+ }
+
+
+
+ /*INDEX*/
+
+/* Estilos para la barra lateral */
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    height: 100vh; /* Establecer la altura al 100% de la altura de la ventana */
+    position: fixed; /* Fijar la barra lateral en su lugar */
+    top: 0; /* Posicionarla en la parte superior */
+    left: 0; /* Posicionarla en la parte izquierda */
+    overflow-y: auto; /* Agregar desplazamiento vertical si es necesario */
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 80px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+
+
+/* Estilos para el botón de cerrar sesión */
+.logout-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f; /* Color rojo para el botón de cerrar sesión */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Hacer que el botón se alinee en la parte inferior */
+    box-shadow: none; /* Eliminar sombra si está presente */
+    outline: none; /* Eliminar el contorno al hacer clic */
+}
+
+.logout-button:hover {
+    background-color: #c9302c; /* Cambiar el color de fondo al pasar el mouse sobre el botón */
+}
+
+
+/* CALIFICACIONES*/
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Estilos para las celdas del encabezado */
+th {
+  background-color: #f63c3c;
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilos para las celdas de datos */
+td {
+  border: 1px solid #dc1313;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilos para las filas impares */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}

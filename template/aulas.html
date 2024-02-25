@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Aulas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="back-button-container">
+        <form action="{{ url_for('index') }}">
+            <button type="submit">Atrás</button>
+        </form>
+    </div>
+    <h1>Listado de Aulas</h1>
+    <div class="aula-container">
+        {% for aula in aulas %}
+            <div class="aula-card">
+                <strong>{{ aula.nombre_materia }}</strong> - {{ aula.curso }}
+                <div class="aula-actions">
+                    <form action="{{ url_for('editar_aula', id=aula.id_materia) }}" method="GET" class="action-form">
+                        <input type="hidden" name="nombre_materia" value="{{ aula.nombre_materia }}">
+                        <button type="submit" class="action-button">Editar</button>
+                    </form>
+
+                    <form action="{{ url_for('eliminar_aula', id=aula.id_materia) }}" method="post" class="action-form">
+                        <button type="submit" class="action-button">Eliminar</button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <form action="{{ url_for('nueva_aula') }}">
+        <button type="submit" class="action-button">Crear nueva aula</button>
+    </form>
+</body>
+</html>

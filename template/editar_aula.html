@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Aula</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="back-button-container">
+        <form action="{{ url_for('listar_aulas') }}">
+            <button type="submit">Atrás</button>
+        </form>
+    </div>
+    <h1>Editar Aula</h1>
+    <form action="{{ url_for('editar_aula', id=aula.id_materia) }}" method="post">
+        <label for="nombre_materia">Nombre de la materia:</label>
+        <input type="text" id="nombre_materia" name="nombre_materia" value="{{ aula.nombre_materia }}">
+        <label for="curso">Curso:</label>
+        <input type="text" id="curso" name="curso" value="{{ aula.curso }}">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" value="{{ aula.fecha }}">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4">{{ aula.descripcion }}</textarea>
+        <button type="submit">Actualizar Aula</button>
+    </form>
+</body>
+</html>
